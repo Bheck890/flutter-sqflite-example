@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sqflite_example/models/breed.dart';
+import 'package:platforms/models/breed.dart';
 
 class BreedBuilder extends StatelessWidget {
   const BreedBuilder({

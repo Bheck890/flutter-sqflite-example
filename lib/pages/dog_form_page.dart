@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sqflite_example/common_widgets/age_slider.dart';
-import 'package:flutter_sqflite_example/common_widgets/breed_selector.dart';
-import 'package:flutter_sqflite_example/common_widgets/color_picker.dart';
-import 'package:flutter_sqflite_example/models/breed.dart';
-import 'package:flutter_sqflite_example/models/dog.dart';
-import 'package:flutter_sqflite_example/services/database_service.dart';
+import 'package:platforms/common_widgets/age_slider.dart';
+import 'package:platforms/common_widgets/breed_selector.dart';
+import 'package:platforms/common_widgets/color_picker.dart';
+import 'package:platforms/models/breed.dart';
+import 'package:platforms/models/dog.dart';
+import 'package:platforms/services/database_service.dart';
 
 class DogFormPage extends StatefulWidget {
   const DogFormPage({Key? key, this.dog}) : super(key: key);

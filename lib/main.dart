@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sqflite_example/pages/home_page.dart';
+import 'package:platforms/pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.teal,
-        accentColor: Colors.tealAccent,
+        hintColor: Colors.tealAccent,
       ),
       home: HomePage(),
     );

@@ -1,7 +1,9 @@
-import 'package:flutter_sqflite_example/models/breed.dart';
-import 'package:flutter_sqflite_example/models/dog.dart';
+import 'dart:io';
+
+import 'package:platforms/models/breed.dart';
+import 'package:platforms/models/dog.dart';
 import 'package:path/path.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 class DatabaseService {
   // Singleton pattern
@@ -11,6 +13,22 @@ class DatabaseService {
 
   static Database? _database;
   Future<Database> get database async {
+
+    if (Platform.isWindows || Platform.isLinux) {
+      // Initialize FFI
+      sqfliteFfiInit();
+
+      // Change the default factory. On iOS/Android, if not using `sqlite_flutter_lib` you can forget
+      // this step, it will use the sqlite version available on the system.
+      databaseFactory = databaseFactoryFfi;
+
+      print("     On desktop.");
+    }
+    else{
+      print("     On mobile.");
+    }
+    
+
     if (_database != null) return _database!;
     // Initialize the DB first time it is accessed
     _database = await _initDatabase();
@@ -18,12 +36,13 @@ class DatabaseService {
   }
 
   Future<Database> _initDatabase() async {
-    final databasePath = await getDatabasesPath();
 
+    final databasePath = await getDatabasesPath();
+    print("Databese path: ======> $databasePath");
     // Set the path to the database. Note: Using the `join` function from the
     // `path` package is best practice to ensure the path is correctly
     // constructed for each platform.
-    final path = join(databasePath, 'flutter_sqflite_database.db');
+    final path = join(databasePath, 'platform.db');
 
     // Set the version. This executes the onCreate function and provides a
     // path to perform database upgrades and downgrades.

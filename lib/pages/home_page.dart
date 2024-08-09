@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sqflite_example/common_widgets/dog_builder.dart';
-import 'package:flutter_sqflite_example/common_widgets/breed_builder.dart';
-import 'package:flutter_sqflite_example/models/breed.dart';
-import 'package:flutter_sqflite_example/models/dog.dart';
-import 'package:flutter_sqflite_example/pages/breed_form_page.dart';
-import 'package:flutter_sqflite_example/pages/dog_form_page.dart';
-import 'package:flutter_sqflite_example/services/database_service.dart';
+import 'package:platforms/common_widgets/dog_builder.dart';
+import 'package:platforms/common_widgets/breed_builder.dart';
+import 'package:platforms/models/breed.dart';
+import 'package:platforms/models/dog.dart';
+import 'package:platforms/pages/breed_form_page.dart';
+import 'package:platforms/pages/dog_form_page.dart';
+import 'package:platforms/services/database_service.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sqflite_example/models/dog.dart';
-import 'package:flutter_sqflite_example/services/database_service.dart';
+import 'package:platforms/models/dog.dart';
+import 'package:platforms/services/database_service.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DogBuilder extends StatelessWidget {

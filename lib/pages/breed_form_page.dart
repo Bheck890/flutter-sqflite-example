@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sqflite_example/models/breed.dart';
-import 'package:flutter_sqflite_example/services/database_service.dart';
+import 'package:platforms/models/breed.dart';
+import 'package:platforms/services/database_service.dart';
 
 class BreedFormPage extends StatefulWidget {
   const BreedFormPage({Key? key}) : super(key: key);
